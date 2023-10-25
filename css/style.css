@@ -53,107 +53,30 @@
   --bodyc: #474747;
 }
 
-body{
-  height:100vh;
-}
-#box{
-  background-color: black;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  white-space: nowrap;
-  color:white;
-}
 
-@media (min-width: 1024px){
-#box{
-  width: 50%;
-}
-p{
-  transform:rotate(90deg);
-  font-size:1rem;
-}
-br{
-  display: none;  
-}
-}
-
-@media(max-width:1024px) {
-  #box {
-    width:auto;
-    text-align: center;
-  }
-  #box p{
-/*     transform: rotate(0); */
-    font-size: 3vw;
-  }
- /*  #box p br {
-    display:block;
-  } */
-}
-
-@media(max-width:624px){
-  #box p {
-    font-size: 20px;
-  }
-}
-
-.box,
-.center {
-/* 
-  width: 5rem;
-  height: 5rem;
-  background-color: #000;
-  transition:0.5s; */
-}
-
-.box1{
-  top:0;
-  left:0;
-}
-.box2{
-  top:0;
-  right: 0;
-}
-
-.box3{
-  bottom: 0;
-  left: 0;;
-}
-
-.box4 {
-  bottom: 0;
-  right: 0;
-}
-.box1:hover,
-.box4:hover{
-  width:100%;
-}
-.box2:hover,
-.box3:hover{
-  height: 100%;
-}
 
 .center{
-  top: 3rem;
-  left: 3rem;
-  right: 3rem;
-  bottom: 3rem;
+  width: 5rem;
+  height: 3rem;  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: auto;
-  max-width:600px;
-  height:600px;
-  width: calc(100vw -5rem) !important;
-  position:fixed;
-  background-color: black;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 3rem;
 }
-
-/* 
+.center::before{
+  content:"언어";
+}
 .center:hover{
-  width:100%;
-  height:100%;
+  background-color: #474747;
+  color: white;
+}
+.center:hover::before { 
+  content: "한국어";
 }
 
- */
+
