@@ -53,30 +53,39 @@
   --bodyc: #474747;
 }
 
+.popipdiv::before{
+  content:"";
+  position:fixed;
+  background-color: rgba(0, 0, 0, .5);
+  left: 0; right: 0; top: 0; bottom: 0;
+}  
 
+/* pop up div #popup가 나타나면 디스플레이가 안보엿다가 다시 나타나게 된다 css 짜는거 되게 중요함!!!
+    pop up div #popup가 사라지면 디스플레이는 none이므로 사라진다.
+*/
+.popupdiv #popup {
+  display: block;
+}
 
-.center{
-  width: 5rem;
-  height: 3rem;  
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+#popup {
+  top:0;
+  left:0;
   bottom: 0;
-  margin: auto;
-  border: 1px solid black;
+  right: 0;
+  margin:auto;
+  width: 10rem;
+  height: 7rem;
+  line-height: 2rem;
+  font-size: 1.8rem;
   text-align: center;
-  line-height: 3rem;
-}
-.center::before{
-  content:"언어";
-}
-.center:hover{
-  background-color: #474747;
-  color: white;
-}
-.center:hover::before { 
-  content: "한국어";
-}
+  display: none;
+}  
+
+#popup button{
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+}  
+
 
 
